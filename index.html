@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Inconsolata:wght@300&family=Manrope:wght@200&family=Poppins:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body class="font-[Poppins] bg-gradient-to-t from-[#B9DDFF] to-[#E9EEFF] h-screen">
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[95%] bg-grey-400 mx-auto">
+            <div>
+                <img class="w-16" src="https://cdn-icons-png.flaticon.com/512/5968/5968204.png" alt="">
+            </div>
+            <div class="nav-links duaration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
+                    <li>
+                        <a class="hover:text-blue-500" href="#">Doctor</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-blue-500" href="#">services</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-blue-500" href="#">location</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-blue-500" href="#">Appointment</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-blue-500" href="#">Healthcare</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex items-center gap-6">
+                <button class="bg-[#a6c1ee] text-white px-5 py-2 rounded-full hover:bg-[#87acec]">Sign in</button>
+                <!-- <ion-icon name="menu-outline"></ion-icon> -->
+                <ion-icon onclick="onToggleMenu(this)" name="menu" class="text-3xl cursor-pointer md:hidden"></ion-icon>
+            </div>
+        </nav>
+    </header>
+    
+<script>
+    const navlinks = document.querySelector('.nav-links')
+    function onToggleMenu(e){
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navlinks.classList.toggle('top-[9%]')
+    }
+</script>
+</body>
+
+</html>
